@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=soundboardy
+Exec=com.github.hezral.soundboardy
+Icon=com.github.hezral.soundboardy
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true

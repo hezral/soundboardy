@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="soundboardy">
+	<schema id="com.github.hezral.soundboardy" path="/com/github/hezral/soundboardy/">
+	</schema>
+</schemalist>

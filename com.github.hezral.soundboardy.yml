@@ -1,0 +1,37 @@
+app-id: com.github.hezral.soundboardy
+runtime: io.elementary.Sdk
+runtime-version: 'daily'
+sdk: io.elementary.Sdk
+command: com.github.hezral.soundboardy
+appstream-compose: false
+finish-args:
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --share=ipc
+  - --share=network
+  - --device=dri
+  - --socket=pulseaudio
+  - --filesystem=home
+  # needed for perfers-color-scheme
+  - --system-talk-name=org.freedesktop.Accounts
+modules:
+  - name: libhandy
+    buildsystem: meson
+    config-opts:
+      - -Dprofiling=false
+      - -Dintrospection=enabled
+      - -Dgtk_doc=false
+      - -Dtests=false
+      - -Dexamples=false
+      - -Dvapi=false
+      - -Dglade_catalog=disabled
+    sources:
+      - type: git
+        url: https://gitlab.gnome.org/GNOME/libhandy
+        tag: 1.0.0
+
+  - name: soundboardy
+    buildsystem: meson
+    sources:
+      - type: dir
+        path: .

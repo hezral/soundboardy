@@ -1,0 +1,6 @@
+data/com.github.hezral.soundboardy.desktop.in
+data/com.github.hezral.soundboardy.appdata.xml.in
+data/com.github.hezral.soundboardy.gschema.xml
+src/main.py
+src/window.py
+
